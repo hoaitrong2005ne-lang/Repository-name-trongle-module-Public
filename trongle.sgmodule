@@ -1,19 +1,14 @@
-#!name=TrongLe Tools ⚡
-#!desc=Network Debug Module by TrongLe
-# 💬 Discord: https://discord.gg/zp8QXAHj
+#!name=TrongLe RevenueCat
+#!desc=Unlock Gold
 #!author=TrongLe
 #!version=1.0
+#!homepage=https://discord.gg/qzV2Hv6a
+#!icon=https://cdn-icons-png.flaticon.com/512/2111/2111370.png
 
 [Script]
 
-request_log = type=http-request,pattern=.*,script-path=script-request,timeout=10
-response_log = type=http-response,pattern=.*,requires-body=true,script-path=script-response,timeout=10
-
-[Script-Definition]
-
-script-request = type=script,script-type=javascript,body=console.log("URL:",$request.url);console.log("Headers:",JSON.stringify($request.headers));$done({});
-
-script-response = type=script,script-type=javascript,body=console.log("Response:",$response.body);$done({});
+revenue = type=http-response,pattern=https:\/\/api\.revenuecat\.com\/v1\/subscribers\/.*,requires-body=true,script-path=https://raw.githubusercontent.com/hoaitrong2005ne-lang/Repository-name-trongle-module-Public/main/revenuecat.js
 
 [MITM]
-hostname = *
+
+hostname = api.revenuecat.com
