@@ -1,0 +1,19 @@
+#!name=TrongLe Tools ⚡
+#!desc=Network Debug Module by TrongLe
+# 💬 Discord: https://discord.gg/zp8QXAHj
+#!author=TrongLe
+#!version=1.0
+
+[Script]
+
+request_log = type=http-request,pattern=.*,script-path=script-request,timeout=10
+response_log = type=http-response,pattern=.*,requires-body=true,script-path=script-response,timeout=10
+
+[Script-Definition]
+
+script-request = type=script,script-type=javascript,body=console.log("URL:",$request.url);console.log("Headers:",JSON.stringify($request.headers));$done({});
+
+script-response = type=script,script-type=javascript,body=console.log("Response:",$response.body);$done({});
+
+[MITM]
+hostname = *
