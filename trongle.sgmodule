@@ -11,4 +11,4 @@ revenue = type=http-response,pattern=https:\/\/api\.revenuecat\.com\/v1\/subscri
 
 [MITM]
 
-hostname = api.revenuecat.com, raw.
+hostname = api.revenuecat.com, raw.githubusercontent.com
