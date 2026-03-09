@@ -7,7 +7,7 @@
 
 [Script]
 
-revenue = type=http-response,pattern=https:\/\/api\.revenuecat\.com\/v1\/subscribers\/.*,requires-body=true,script-path=https://raw.githubusercontent.com/hoaitrong2005ne-lang/Repository-name-trongle-module-Public/main/revenuecat.js
+revenue = type=http-response,pattern=https:\/\/api\.revenuecat\.com\/v1\/subscribers\/.*,requires-body=true,script-path=https://raw.githubusercontent.com/hoaitrong2005ne-lang/Repository-name-trongle-module-Public/refs/heads/main/revenuecat.js
 
 [MITM]
 
