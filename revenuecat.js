@@ -1,3 +1,5 @@
+console.log("RevenueCat Script Running");
+
 let obj = JSON.parse($response.body);
 
 obj.subscriber.subscriptions = {
